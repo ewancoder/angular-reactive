@@ -1,0 +1,28 @@
+{
+  "name": "ewancoder-angular-reactive",
+  "version": "0.1.0-alpha.1",
+  "description": "Angular reactive.",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -p src -w",
+    "build": "rm -rf lib && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewancoder/angular-reactive"
+  },
+  "keywords": ["Angular", "Reactive"],
+  "author": "ewancoder@gmail.com",
+  "bugs": {
+    "url": "https://github.com/ewancoder/angular-reactive"
+  },
+  "homepage": "https://github.com/ewancoder/angular-reactive#readme",
+  "dependencies": {
+    "@angular/core": "^2.4.4",
+    "rxjs": "^5.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^2.1.5"
+  }
+}
