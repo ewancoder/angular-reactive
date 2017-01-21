@@ -1,18 +1,21 @@
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
+import { BusyService } from './busy.service';
 
 export interface NameToValueMap
 {
     [key: string]: any;
 }
 
-export abstract class ReactiveDataService<TEntity extends NameToValueMap> {
+export abstract class ReactiveDataService<TEntity extends NameToValueMap> extends BusyService {
     private readonly _entities: BehaviorSubject<TEntity[]>;
     private readonly dataStore: {
         entities: TEntity[]
     };
 
     constructor(private readonly param: string) {
+        super();
+
         this.dataStore = { entities: [] };
         this._entities = new BehaviorSubject<TEntity[]>([]);
     }
